@@ -200,11 +200,13 @@ For example:
 
 We've seen examples where this will liquidate positions, allow insane arbitrage, ruin DEX positions and more. 
 
+
 ### Oracle Manipulation Solutions
 
 The easiest way to solve this is to use decentralized oracles. [Chainlink](https://chain.link/) is the leading decentralized oracle provider, and the Chainlink network can be leveraged to bring decentralized data on-chain.
 
 Another common solution is to use a time-weighted average price feed, so that price is averaged out over `X` time periods.  Not only does this prevent oracle manipulation, it reduces the chance you can be front-run, as an order executed right before yours won't have as drastic an impact on price.  One tool that gathers Uniswap price feeds every thirty minutes is [Keep3r](https://docs.uniquote.finance/).  If you're looking to build a custom solution, [Uniswap provides a sliding window example](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol).
+
 
 ##  Front-Running 
 
@@ -225,6 +227,7 @@ Front-running, coined originally for traditional financial markets, is the race 
 
 
 ### Taxonomy
+
 
 By defining a [taxonomy](https://arxiv.org/abs/1902.05164) and differentiating each group from another, we can make it easier to discuss the problem and find solutions for each group. 
 
